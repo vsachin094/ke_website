@@ -62,6 +62,32 @@ export function Footer() {
               distributor of Livguard Solar and Livguard Energy. Our trusted
               channel partnerships support multi-brand and custom power solutions.
             </p>
+            <div className="mt-6 flex items-center gap-3" aria-label="Social media links">
+              <a
+                href="https://www.facebook.com/kalyanienterprises1"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kalyani Enterprises on Facebook"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors hover:border-orange-400 hover:bg-orange-500/10 hover:text-orange-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M13.5 21v-8h2.7l.4-3h-3.1V8.1c0-.9.3-1.6 1.7-1.6h1.8V3.8c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3V10H7.5v3h2.8v8h3.2Z" />
+                </svg>
+              </a>
+              <a
+                href="https://www.instagram.com/kalyani__enterprises"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Kalyani Enterprises on Instagram"
+                className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-700 text-gray-400 transition-colors hover:border-orange-400 hover:bg-orange-500/10 hover:text-orange-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400"
+              >
+                <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
+                  <rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5" />
+                  <circle cx="12" cy="12" r="4.1" />
+                  <circle cx="17.5" cy="6.7" r="1" fill="currentColor" stroke="none" />
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Links Grid */}
