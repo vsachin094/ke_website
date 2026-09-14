@@ -46,9 +46,9 @@ export default function App() {
 
   return (
     <LanguageProvider>
-      <div className="min-h-full flex flex-col overflow-x-hidden bg-white text-gray-900">
+      <div className="flex min-h-full w-full min-w-0 flex-col overflow-x-hidden bg-white text-gray-900">
         <Header />
-        <main className="flex-1">
+        <main className="min-w-0 flex-1">
           <Suspense fallback={<div className="flex min-h-[50vh] items-center justify-center bg-gray-50 text-sm text-gray-500">Loading page...</div>}><Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/products" element={<ProductsPage />} />

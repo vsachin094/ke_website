@@ -100,7 +100,7 @@ export function Testimonials() {
             onClick={prevSlide}
             disabled={currentIndex === 0}
             className={cn(
-              'absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-12 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-lg hover:bg-gray-50 transition-all disabled:opacity-30 disabled:pointer-events-none',
+              'absolute left-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white shadow-lg transition-all hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30 sm:left-3',
               'text-gray-600 hover:text-orange-600'
             )}
             aria-label="Previous testimonial"
@@ -113,7 +113,7 @@ export function Testimonials() {
             <motion.div
               animate={{ x: -currentIndex * (100 / itemsPerView) + '%' }}
               transition={{ type: 'spring', stiffness: 100, damping: 30 }}
-              className="flex pb-4"
+              className="flex min-w-0 pb-4"
               role="list"
             >
               {testimonials.map((testimonial, index) => (
@@ -123,6 +123,7 @@ export function Testimonials() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-100px' }}
                   transition={{ delay: index * 0.1 }}
+                  className="min-w-0 box-border"
                   style={{
                     flex: `0 0 ${100 / itemsPerView}%`,
                     paddingRight: itemsPerView > 1 ? '24px' : '0',
@@ -149,7 +150,7 @@ export function Testimonials() {
             onClick={nextSlide}
             disabled={currentIndex >= maxIndex}
             className={cn(
-              'absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-12 z-20 w-12 h-12 rounded-full bg-white border border-gray-200 flex items-center justify-center shadow-lg hover:bg-gray-50 transition-all disabled:opacity-30 disabled:pointer-events-none',
+              'absolute right-2 top-1/2 z-20 flex h-12 w-12 -translate-y-1/2 items-center justify-center rounded-full border border-gray-200 bg-white shadow-lg transition-all hover:bg-gray-50 disabled:pointer-events-none disabled:opacity-30 sm:right-3',
               'text-gray-600 hover:text-orange-600'
             )}
             aria-label="Next testimonial"
