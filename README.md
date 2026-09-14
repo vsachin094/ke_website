@@ -53,8 +53,9 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 
 Production requires `DATABASE_URL`, `SECRET_KEY`, `ADMIN_USERNAME`,
 `ADMIN_PASSWORD`, `APP_ENV=production`, `CORS_ORIGINS`, and `ALLOWED_HOSTS`.
-Run `python seed_data.py` once after configuring the database. This command
-only seeds catalogue/content data. On backend startup, admin credentials are
+Set `SEED_ON_STARTUP=true` to add any missing catalogue/content records during
+backend startup. The seeder is idempotent and does not overwrite existing
+admin-managed records. On backend startup, admin credentials are
 read from `ADMIN_USERNAME` and `ADMIN_PASSWORD` and the admin account is
 created or updated automatically. They are not stored in `config.json` or seed
 data.

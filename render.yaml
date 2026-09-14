@@ -13,7 +13,6 @@ services:
     healthCheckPath: /health
     domains:
       - kalyanienterprises.com
-    initialDeployHook: python backend/seed_data.py
     envVars:
       - key: APP_ENV
         value: production
@@ -21,6 +20,8 @@ services:
         sync: false
       - key: DATABASE_FALLBACK_TO_SQLITE
         value: "false"
+      - key: SEED_ON_STARTUP
+        value: "true"
       - key: SECRET_KEY
         generateValue: true
       - key: ADMIN_USERNAME
