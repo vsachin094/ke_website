@@ -90,7 +90,7 @@ FRONTEND_DIST = os.path.join(
     "frontend",
     "dist",
 )
-MEDIA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
+MEDIA_DIR = setting("database", "data_dir", "DATA_DIR", "data")
 if os.path.isdir(MEDIA_DIR):
     app.mount("/media", StaticFiles(directory=MEDIA_DIR), name="media")
 
