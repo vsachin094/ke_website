@@ -38,10 +38,10 @@ try:
 finally:
     admin_db.close()
 
-# Render's free plan does not provide an interactive service shell. When
-# enabled, seed-data.py safely adds missing catalogue content at startup while
-# leaving existing admin-managed records unchanged.
-if os.getenv("SEED_ON_STARTUP", "false").lower() in {"1", "true", "yes", "on"}:
+# Render's free plan does not provide an interactive service shell. Seeding is
+# enabled by default so a fresh deployment gets its catalogue automatically.
+# Set SEED_ON_STARTUP=false when using a paid pre-deploy seed command instead.
+if os.getenv("SEED_ON_STARTUP", "true").lower() in {"1", "true", "yes", "on"}:
     from seed_data import main as seed_database
 
     seed_database()
