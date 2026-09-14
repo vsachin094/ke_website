@@ -60,6 +60,10 @@ read from `ADMIN_USERNAME` and `ADMIN_PASSWORD` and the admin account is
 created or updated automatically. They are not stored in `config.json` or seed
 data.
 
+The optional backend keep-alive worker can be enabled with
+`KEEP_ALIVE_ENABLED=true`, `KEEP_ALIVE_URL`, and
+`KEEP_ALIVE_INTERVAL_MINUTES`. It is disabled by default for local development.
+
 For PostgreSQL, the host, port, database name, and username can be kept in
 `backend/config.json`; set only `DATABASE_PASSWORD` in `.env`. You can also
 provide a complete `DATABASE_URL` instead. See `.env.example` for both forms.

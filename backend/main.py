@@ -9,6 +9,7 @@ from fastapi.middleware.trustedhost import TrustedHostMiddleware
 from config import setting
 from database import Base, engine, SessionLocal
 from routers import products, services, queries, feedback, analytics, admin, catalog
+from keep_alive import start_keep_alive
 
 # Create database tables
 Base.metadata.create_all(bind=engine)
@@ -134,3 +135,6 @@ if os.path.isdir(assets_dir):
 def health_check():
     """Health check endpoint"""
     return {"status": "ok"}
+
+
+keep_alive_stop = start_keep_alive()
