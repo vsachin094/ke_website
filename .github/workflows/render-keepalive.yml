@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check production health endpoint
-        run: curl --fail --silent --show-error --max-time 30 https://www.kalyanienterprises.com/health
+        run: curl --fail --silent --show-error --max-time 30 https://www.kalyanienterprises.com
