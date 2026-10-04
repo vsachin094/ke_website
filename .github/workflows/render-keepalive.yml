@@ -1,4 +1,4 @@
-name: Keep Website Alive
+name: Keep Render App Alive
 
 on:
   schedule:
@@ -14,4 +14,4 @@ jobs:
         run: |
           curl -L --fail --silent --show-error \
             --max-time 30 \
-            https://ke-website.onrender.com/health || true
+            https://kalyanienterprises.onrender.com/health || true
