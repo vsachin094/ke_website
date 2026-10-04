@@ -6,10 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  ping:
+  keep_alive:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping website
+      - name: Open website every 10 minutes
         run: |
-          curl -I --max-time 30 https://www.kalyanienterprises.com
+          curl -L --fail --silent --show-error \
+            --max-time 30 \
+            https://www.kalyanienterprises.com > /dev/null
