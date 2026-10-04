@@ -10,8 +10,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Open website every 10 minutes
+      - name: Keep Render app alive
         run: |
           curl -L --fail --silent --show-error \
             --max-time 30 \
-            https://www.kalyanienterprises.com > /dev/null
+            https://ke-website.onrender.com/health || true
