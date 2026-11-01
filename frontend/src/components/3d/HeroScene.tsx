@@ -278,7 +278,7 @@ export function HeroScene() {
         dpr={[1, 1.25]}
         className="w-full h-full"
       >
-        <Suspense fallback={<div className="h-full w-full bg-gradient-to-br from-gray-950 via-gray-900 to-orange-950" />}>
+        <Suspense fallback={null}>
           <HeroSceneContent />
         </Suspense>
         <OrbitControls
