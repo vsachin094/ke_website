@@ -47,7 +47,7 @@ export function Footer() {
             <Link to="/#home" className="group inline-flex items-center gap-2.5" aria-label="Kalyani Enterprises Home">
               <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-white p-1 shadow-lg shadow-black/20 sm:h-12 sm:w-12">
                 <img
-                  src="/images/KE_Logo.png"
+                  src="/images/KE_Logo.webp"
                   alt="Kalyani Enterprises Logo"
                   className="h-full w-full object-contain transition-transform group-hover:scale-105"
                 />

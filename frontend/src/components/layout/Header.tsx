@@ -77,7 +77,7 @@ export function Header() {
           <div className="flex items-center gap-3">
             <Link to="/" onClick={goHome} className="group flex items-center gap-2.5" aria-label="Kalyani Enterprises Home">
               <img
-                src="/images/KE_Logo.png"
+                src="/images/KE_Logo.webp"
                 alt="Kalyani Enterprises Logo"
                 className="h-10 w-10 object-contain drop-shadow-[0_2px_4px_rgba(0,0,0,0.12)] transition-transform group-hover:scale-105 sm:h-12 sm:w-12"
               />

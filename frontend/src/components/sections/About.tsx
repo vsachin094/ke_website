@@ -125,7 +125,7 @@ export function About() {
               <div className="absolute -inset-4 bg-gradient-to-br from-orange-500/20 to-amber-500/20 rounded-3xl blur-2xl" aria-hidden="true" />
               <div className="relative rounded-3xl overflow-hidden border border-gray-100 shadow-xl shadow-gray-200/50">
                 <img
-                  src="/images/about_us.png"
+                  src="/images/about_us.webp"
                   alt="Kalyani Enterprises solar installation team at work"
                   className="w-full h-auto object-cover"
                   loading="lazy"

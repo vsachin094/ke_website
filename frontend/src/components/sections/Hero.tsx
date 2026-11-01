@@ -10,6 +10,15 @@ import { useLanguage } from '@/components/providers/LanguageProvider';
 
 export function Hero() {
   const { t } = useLanguage();
+  const [show3D, setShow3D] = useState(() => typeof window !== 'undefined' && window.matchMedia('(min-width: 768px)').matches);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
+    const update3DVisibility = () => setShow3D(mediaQuery.matches);
+    mediaQuery.addEventListener('change', update3DVisibility);
+    return () => mediaQuery.removeEventListener('change', update3DVisibility);
+  }, []);
+
   return (
     <section
       id="home"
@@ -18,7 +27,7 @@ export function Hero() {
     >
       {/* 3D Canvas Background */}
       <div className="absolute inset-0 z-0" aria-hidden="true">
-        <Suspense fallback={<div className="h-full w-full bg-gradient-to-br from-gray-950 via-gray-900 to-orange-950" />}><HeroScene /></Suspense>
+        {show3D && <Suspense fallback={<div className="h-full w-full bg-gradient-to-br from-gray-950 via-gray-900 to-orange-950" />}><HeroScene /></Suspense>}
       </div>
 
       {/* Gradient Overlay */}
@@ -52,7 +61,7 @@ export function Hero() {
             className="mb-6"
           >
             <div className="flex justify-center" aria-label="Kalyani Enterprises">
-              <img src="/images/KE_Logo.png" alt="Kalyani Enterprises logo" width="96" height="96" fetchPriority="high" decoding="async" className="h-20 w-20 object-contain drop-shadow-2xl sm:h-24 sm:w-24" />
+              <img src="/images/KE_Logo.webp" alt="Kalyani Enterprises logo" width="96" height="96" fetchPriority="high" decoding="async" className="h-20 w-20 object-contain drop-shadow-2xl sm:h-24 sm:w-24" />
             </div>
           </motion.div>
 

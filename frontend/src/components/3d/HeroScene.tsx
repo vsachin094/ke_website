@@ -84,7 +84,7 @@ function FloatingShapes() {
       </group>
 
       {/* Floating Energy Particles */}
-      <EnergyParticles count={150} radius={4} />
+      <EnergyParticles count={80} radius={4} />
 
       {/* Inverter Box */}
       <group position={[-3.5, -0.5, 2]}>
@@ -205,8 +205,8 @@ function SunLight() {
         intensity={3}
         color="#fff8e7"
         castShadow
-        shadow-mapSize-width={2048}
-        shadow-mapSize-height={2048}
+        shadow-mapSize-width={1024}
+        shadow-mapSize-height={1024}
         shadow-camera-near={1}
         shadow-camera-far={50}
         shadow-camera-left={-15}
@@ -236,7 +236,7 @@ function GroundPlane() {
   return (
     <>
       <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -1.5, 0]} receiveShadow>
-        <planeGeometry args={[50, 50, 50, 50]} />
+        <planeGeometry args={[50, 50]} />
         <meshStandardMaterial
           color="#0a0a1a"
           roughness={0.9}
@@ -269,15 +269,14 @@ export function HeroScene() {
     <div className="relative w-full h-full min-h-[360px] sm:min-h-[500px] lg:min-h-[600px]">
       <Canvas
         gl={{ 
-          antialias: true, 
+          antialias: true,
           alpha: true, 
           powerPreference: 'high-performance',
-          preserveDrawingBuffer: true,
-          logarithmicDepthBuffer: true,
+          logarithmicDepthBuffer: false,
         }}
         camera={{ position: [0, 2, 6], fov: 35 }}
         shadows="percentage"
-        dpr={[1, 1.5]}
+        dpr={[1, 1.25]}
         className="w-full h-full"
       >
         <Suspense fallback={<Html center className="text-orange-500">Loading 3D Scene...</Html>}>
