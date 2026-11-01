@@ -2,7 +2,6 @@
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import {
-  Html,
   OrbitControls,
   Environment,
   ContactShadows,
@@ -279,7 +278,7 @@ export function HeroScene() {
         dpr={[1, 1.25]}
         className="w-full h-full"
       >
-        <Suspense fallback={<Html center className="text-orange-500">Loading 3D Scene...</Html>}>
+        <Suspense fallback={<div className="h-full w-full bg-gradient-to-br from-gray-950 via-gray-900 to-orange-950" />}>
           <HeroSceneContent />
         </Suspense>
         <OrbitControls
